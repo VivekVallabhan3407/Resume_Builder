@@ -1,6 +1,6 @@
 ﻿# Resume Builder Project
 
-A  Resume Builder that helps users create professional resumes effortlessly. The application provides multiple resume templates, allowing users to input their details and generate a well-formatted resume.
+A  Resume Builder that helps users create professional resumes effortlessly. The application provides multiple resume templates, allowing users to input their details and generate a well-formatted resume. Just enter your details in the form, choose a template and generate your resume to be downloaded.
 
 ##Features
 1. User-friendly interface with HTML, CSS, and JavaScript.
@@ -11,12 +11,12 @@ A  Resume Builder that helps users create professional resumes effortlessly. The
 
 ##Technologies Used
 ###Frontend:
--HTML – Structure of the pages.
--CSS – Styling and layout design.
--JavaScript – Dynamic interactions and form handling.
+- HTML – Structure of the pages.
+- CSS – Styling and layout design.
+- JavaScript – Dynamic interactions and form handling.
 ###Backend:
--Django – Handles user inputs and processes resume data.
--MySQL – Database for storing user data.
+- Django – Handles user inputs and processes resume data.
+- MySQL – Database for storing user data.
 
 ##How It Works
 1. Sign Up / Log In.
