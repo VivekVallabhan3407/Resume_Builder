@@ -1,0 +1,107 @@
+/* General Resume Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    width: 60%;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.header {
+    background-color: #4a90e2; /* Top color block */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.personal-info h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.personal-info p {
+    margin: 5px 0;
+}
+
+.photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Summary Section */
+.summary h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+/* Experience Section */
+.experience h2,
+.education h2,
+.skills h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.job {
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    gap: 20px;
+}
+
+.skills-column {
+    flex: 1;
+}
+
+.skills-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.skills-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-column ul li {
+    margin-bottom: 5px;
+}
+/* Languages and Hobbies Sections */
+.languages, .hobbies {
+    margin-top: 20px;
+}
+
+.languages h2, .hobbies h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.languages ol, .hobbies ol {
+    padding-left: 20px; /* Indentation for ordered lists */
+}
+
+.languages ol li, .hobbies ol li {
+    margin-bottom: 5px;
+}

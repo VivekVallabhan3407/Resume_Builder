@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="{% url 'index' %}"> <!-- Use Django's URL tag here -->
+                    <img src="{% static 'images/ResumeBoostlogo.png' %}" alt="Resume Boost logo" width="140px">
+                </a>
+            </div>
+            <div class="nav-link">
+                <a href="{% url 'index' %}">Home</a> 
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm" method="post" onsubmit="return handleLogin(event)">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <p id="usernameError" style="color: red; font-size: 0.9em;"></p>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>   
+                    <span class="toggle-password" onclick="togglePassword()">
+                        <i id="eyeIcon" class="fa fa-eye"></i>
+                    </span> 
+                    <p id="passwordError" style="color: red; font-size: 0.9em;"></p>
+                </div>
+               
+            </div>
+            <button type="submit" class="btn">Login</button>
+            {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+                <li class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+        </form>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a></p>
+        <p><a href="{% url 'forgot-password' %}">Forgot Password?</a></p>
+    </div>
+    <script type="text/javascript">
+        var indexUrl = "{% url 'index' %}";
+    </script>
+    <script   type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    
+</body>
+</html>

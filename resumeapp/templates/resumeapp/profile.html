@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="{% url 'index' %}">
+                <img src="{% static 'images/ResumeBoostlogo.png' %}" alt="Resume Boost logo" width="140px"></a></div>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'create-resume' %}">Create Resume</a></li>
+                <li><a href="{% url 'templates' %}">Templates</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script  src="{% static 'js/script.js' %}"></script>
+    
+        <section id="profile-section">
+            <h2>Your Profile</h2>
+            
+            
+            <div class="profile-info">
+                <div class="profile-detail">
+                       <strong>Username:</strong> <span>{{ user.username }}</span>
+                </div>
+                
+                <div class="profile-detail">
+                    <strong>Email:</strong> <span>{{ user.email }}</span>
+                </div>
+                
+              
+            </div>
+            <form class="logout-form" method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn logout-btn">Logout</button>
+            </form> 
+        </section>
+        
+    
+</body>
+</html>

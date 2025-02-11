@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME TEMPLATE 2</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <div class="resume">
+        <header class="header">
+            <div class="header-content">
+                <div class="personal-info">
+                    <h1>Richard Williams</h1>
+                    <p>Software Developer</p>
+                    <p>Email: richard1567@gmail.com | Phone: (123) 759-7890</p>
+                    <p>Location: San Francisco, CA</p>
+                </div>
+                <div class="photo">
+                    <img src="{% static 'images/profile.png' %}" alt="Profile Photo">  
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary Section -->
+        <section class="summary">
+            <h2>Professional Summary</h2>
+            <p>An enthusiastic software developer with expertise in Graphics Design, Database Management, and Version Control (Git). Skilled in creating visually appealing designs, managing robust databases, and facilitating seamless collaboration through version control. .</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Senior Graphics Designer & Database Specialist</h3>
+                <p>Creative Tech Solutions Inc., San Francisco, CA | Jan 2020 - Present</p>
+                <ul>
+                    <li>Designed visually engaging graphics and UI elements for web and mobile applications.</li>
+                    <li>Managed and optimized company databases to ensure data integrity and efficient retrieval.</li>
+                    <li>Led version control processes using Git, enhancing team collaboration and codebase stability.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>Database Manager & Graphic Designer</h3>
+                <p>Design Innovations, Los Angeles, CA | Jun 2017 - Dec 2019</p>
+                <ul>
+                    <li>Created graphics for digital marketing and web projects, improving brand aesthetics.</li>
+                    <li>Built and maintained database systems to support data-driven applications for clients.</li>
+                    <li>Implemented Git workflows, standardizing version control practices across the development team.</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <div class="degree">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of California, Berkeley | Graduated: June 2018</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <!-- Hard Skills -->
+                <div class="skills-column">
+                    <h3>Hard Skills</h3>
+                    <ul>
+                        <li>Graphics Design</li>
+                        <li>Database Management</li>
+                        <li>Version Control (Git)</li>
+                    </ul>
+                </div>
+    
+                <!-- Soft Skills -->
+                <div class="skills-column">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Adaptability</li>
+                        <li>Communication</li>
+                        <li>Problem-Solving</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project Management App</h3>
+                <p>Built a web-based project management application using Django and JavaScript. Features included task tracking, user authentication, and real-time updates using WebSockets.</p>
+            </div>
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Developed a personal portfolio website to showcase projects and skills. Built using HTML, CSS, and JavaScript with a responsive design for mobile and desktop views.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certified Web Developer, FreeCodeCamp</li>
+                <li>Python for Data Science, Coursera</li>
+                <li>Responsive Web Design Certification, freeCodeCamp</li>
+            </ul>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards">
+            <h2>Awards</h2>
+            <ul>
+                <li>Employee of the Year, Tech Solutions Inc. (2022)</li>
+                <li>Best Software Developer Award, Web Innovators (2019)</li>
+            </ul>
+        </section>
+
+                <!-- Languages Section -->
+                <section class="languages">
+                    <h2>Languages</h2>
+                    <ol>
+                        <li>English: Fluent</li>
+                        <li>Spanish: Intermediate</li>
+                        <li>French: Basic</li>
+                    </ol>
+                </section>
+        
+                <!-- Hobbies Section -->
+                <section class="hobbies">
+                    <h2>Hobbies</h2>
+                    <ol>
+                        <li>Traveling</li>
+                        <li>Music</li>
+                        <li>Reading</li>
+                    </ol>
+                </section>
+        
+        
+    </div>
+</body>
+</html>

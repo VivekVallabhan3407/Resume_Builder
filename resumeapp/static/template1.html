@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME TEMPLATE 1</title>
+    {% load static %}  <!-- Load static files -->
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">  <!-- Update this to use the static tag -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  <!-- Keep this line as it is, since it's a CDN link -->
+</head>
+<body>
+    <div class="resume">
+        <!-- Header Section -->
+        <div class="header-container">
+            <!-- Personal Info on Left -->
+            <div class="personal-info">
+                <h1>John Doe</h1>
+                <p>Software Developer</p>
+                <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
+                <p>Location: San Francisco, CA</p>
+            </div>
+
+            <!-- Image on Right -->
+            <div class="profile-image">
+                <img src="{% static 'images/profile.png' %}" alt="Profile Image">
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="summary">
+            <h2>Professional Summary</h2>
+            <p>A highly motivated software developer with experience in web development and project management. Skilled in HTML, CSS, JavaScript, and Python. Passionate about building innovative solutions to real-world problems.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Senior Software Developer</h3>
+                <p>Tech Solutions Inc., San Francisco, CA | Jan 2020 - Present</p>
+                <ul>
+                    <li>Developed and maintained web applications using JavaScript and Python.</li>
+                    <li>Collaborated with a team of developers to create efficient, scalable software.</li>
+                    <li>Implemented responsive design principles to enhance user experience across devices.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Software Developer</h3>
+                <p>Web Innovators, Los Angeles, CA | Jun 2017 - Dec 2019</p>
+                <ul>
+                    <li>Worked on front-end and back-end development for various client projects.</li>
+                    <li>Improved application performance by optimizing code and database queries.</li>
+                    <li>Assisted in planning and coordinating development tasks with team members.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <div class="degree">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of California, Berkeley | Graduated: May 2017</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <!-- Hard Skills -->
+                <div class="skills-column">
+                    <h3>Hard Skills</h3>
+                    <ul>
+                        <li>Data Analysis</li>
+                        <li>Database Management</li>
+                        <li>Version Control (Git)</li>
+                    </ul>
+                </div>
+        
+                <!-- Soft Skills -->
+                <div class="skills-column">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Adaptability</li>
+                        <li>Communication</li>
+                        <li>Problem-Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project Management App</h3>
+                <p>Built a web-based project management application using Django and JavaScript. Features included task tracking, user authentication, and real-time updates using WebSockets.</p>
+            </div>
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Developed a personal portfolio website to showcase projects and skills. Built using HTML, CSS, and JavaScript with a responsive design for mobile and desktop views.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certified Web Developer, FreeCodeCamp</li>
+                <li>Python for Data Science, Coursera</li>
+                <li>Responsive Web Design Certification, freeCodeCamp</li>
+            </ul>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards">
+            <h2>Awards</h2>
+            <ul>
+                <li>Employee of the Year, Tech Solutions Inc. (2022)</li>
+                <li>Best Software Developer Award, Web Innovators (2019)</li>
+            </ul>
+        </section>
+                <!-- Languages Section -->
+                <section class="languages">
+                    <h2>Languages</h2>
+                    <ol>
+                        <li>English: Fluent</li>
+                        <li>Spanish: Intermediate</li>
+                        <li>French: Basic</li>
+                    </ol>
+                </section>
+        
+                <!-- Hobbies Section -->
+                <section class="hobbies">
+                    <h2>Hobbies</h2>
+                    <ol>
+                        <li>Photography</li>
+                        <li>Traveling</li>
+                        <li>Coding</li>
+                        <li>Reading</li>
+                    </ol>
+                </section>
+        
+    </div>
+</body>
+</html>

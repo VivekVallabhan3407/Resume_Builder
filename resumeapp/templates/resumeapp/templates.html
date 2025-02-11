@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+   
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="{% url 'index' %}">
+                <img src="{% static 'images/ResumeBoostlogo.png' %}" alt="Resume Boost logo" width="140px"></a></div>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'create-resume' %}">Create Resume</a></li>
+                <li><a href="{% url 'templates' %}">Templates</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="carousel-container">
+        <div class="card" >
+            <img src="{% static 'images/template1.png' %}" alt="Template 1" >
+            <h3>Template 1</h3>
+            <button onclick="openPreviewModal(1)">Preview</button>
+        </div>
+        
+        <div class="card" ">
+            <img src="{% static 'images/template2.png' %}" alt="Template 2" >
+            <h3>Template 2</h3>
+            <button onclick="openPreviewModal(2)">Preview</button>
+        </div>
+        
+        <div class="card" >
+            <img src="{% static 'images/template3.png' %}" alt="Template 3" >
+            <h3>Template 3</h3>
+            <button onclick="openPreviewModal(3)">Preview</button>
+        </div>
+    </div>
+
+    <!-- Modal for Preview -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <iframe id="templateIframe" src=""></iframe>
+            <div class="modal-buttons">
+                <button class="btn" id="confirmBtn" onclick="confirmTemplate()">Confirm</button>
+                <button class="btn" id="cancelBtn" onclick="closePreviewModal()">Cancel</button>
+            </div>
+            <div id="exportButtons" style="display: none;">
+                <button class="btn" onclick="exportAsPDF()">Export to PDF</button>
+                <button class="btn" onclick="exportAsWord()">Export to Word</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPreviewModal(templateId) {
+            const iframe = document.getElementById("templateIframe");
+
+            iframe.src = `/preview/${templateId}/`;
+            document.getElementById("previewModal").style.display = "flex";
+        }
+        function closePreviewModal() {
+            document.getElementById("previewModal").style.display = "none";
+            document.getElementById("templateIframe").src = ""; 
+        }
+    
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.1.1/html-docx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script  src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
+
+
+
+<

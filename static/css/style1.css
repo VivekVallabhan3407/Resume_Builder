@@ -1,0 +1,131 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2em;
+    color: #0073e6;
+}
+
+.header p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Sections */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0073e6;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.job h3, .degree h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.job p, .degree p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Experience & Education Details */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+.skills-column {
+    flex: 1;
+}
+
+.skills-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.skills-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-column ul li {
+    margin-bottom: 5px;
+}
+/* Languages and Hobbies Sections */
+.languages, .hobbies {
+    margin-top: 20px;
+}
+
+.languages h2, .hobbies h2 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.languages ol, .hobbies ol {
+    padding-left: 20px; /* Indentation for ordered lists */
+}
+
+.languages ol li, .hobbies ol li {
+    margin-bottom: 5px;
+}
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Personal Info on the Left */
+.personal-info {
+    flex: 1;
+}
+
+/* Profile Image on the Right */
+.profile-image img {
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+}

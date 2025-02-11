@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME TEMPLATE 1</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <div class="resume">
+        <!-- Header Section -->
+        <div class="header-container">
+            <div class="personal-info">
+                <h1>John Smith</h1>
+                <p>Software Developer</p>
+                <p>Email: johnsmith123@gmail.com | Phone: (123) 952-7890</p>
+                <p>Location: San Francisco, CA</p>
+            </div>
+
+            <div class="profile-image">
+                <img src="{% static 'images/profile.png' %}" alt="Profile Image">
+            </div>
+        </div>
+        <hr>
+        <!-- Summary Section -->
+        <section class="summary">
+            <h2>Professional Summary</h2>
+            <p>An enthusiastic software developer with expertise in Programming, Graphics Design, and Version Control (Git). Skilled in writing efficient code, creating compelling designs, and maintaining collaborative workflows</p>
+        </section>
+        <hr>
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Senior Software Engineer</h3>
+                <p>BrightWave Tech, New York, NY | Mar 2021 - Present</p>
+                <ul>
+                    <li>Developed software applications using multiple programming languages, optimizing code for performance and readability.</li>
+                    <li>Designed and implemented user interfaces with a focus on user experience and visual appeal.</li>
+                    <li>Led the team in version control practices using Git, ensuring streamlined collaboration and code integrity across projects.</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>Software Developer</h3>
+                <p>PixelForge Studio, Austin, TX | Jul 2018 - Feb 2021</p>
+                <ul>
+                    <li>Built and maintained client-facing applications, handling both front-end and back-end programming tasks.</li>
+                    <li>Developed graphics and visual content for web applications, enhancing the brand’s online presence.</li>
+                    <li>Managed Git repositories, overseeing branching, merging, and version tracking for multiple projects.</li>
+                </ul>
+            </div>
+            
+        </section>
+        <hr>
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <div class="degree">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of California, Berkeley | Graduated: May 2015</p>
+            </div>
+        </section>
+        <hr>
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <!-- Hard Skills -->
+                <div class="skills-column">
+                    <h3>Hard Skills</h3>
+                    <ul>
+                        <li>Programming</li>
+                        <li>Graphics Design</li>
+                        <li>Version Control (Git)</li>
+                    </ul>
+                </div>
+        
+                <!-- Soft Skills -->
+                <div class="skills-column">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Adaptability</li>
+                        <li>Communication</li>
+                        <li>Problem-Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project Management App</h3>
+                <p>Built a web-based project management application using Django and JavaScript. Features included task tracking, user authentication, and real-time updates using WebSockets.</p>
+            </div>
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Developed a personal portfolio website to showcase projects and skills. Built using HTML, CSS, and JavaScript with a responsive design for mobile and desktop views.</p>
+            </div>
+        </section>
+        <hr>
+        <!-- Certifications Section -->
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certified Web Developer, FreeCodeCamp</li>
+                <li>Python for Data Science, Coursera</li>
+                <li>Responsive Web Design Certification, freeCodeCamp</li>
+            </ul>
+        </section>
+        <hr>
+        <!-- Awards Section -->
+        <section class="awards">
+            <h2>Awards</h2>
+            <ul>
+                <li>Employee of the Year, Tech Solutions Inc. (2022)</li>
+                <li>Best Software Developer Award, Web Innovators (2019)</li>
+            </ul>
+        </section>
+        <hr>
+                <!-- Languages Section -->
+                <section class="languages">
+                    <h2>Languages</h2>
+                    <ol>
+                        <li>English: Fluent</li>
+                        <li>Spanish: Intermediate</li>
+                        <li>French: Basic</li>
+                    </ol>
+                </section>
+        <hr>
+                <!-- Hobbies Section -->
+                <section class="hobbies">
+                    <h2>Hobbies</h2>
+                    <ol>
+                        <li>Traveling</li>
+                        <li>Sports</li>
+                        <li>Reading</li>
+                    </ol>
+                </section>
+    </div>
+</body>
+</html>

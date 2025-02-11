@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Resume</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="{% url 'index' %}">
+                <img src="{% static 'images/ResumeBoostlogo.png' %}" alt="Resume Boost logo" width="140px"></a></div>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'create-resume' %}">Create Resume</a></li>
+                <li><a href="{% url 'templates' %}">Templates</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Fill in your Resume Details</h2>
+        <p>Complete the form to build a resume you can download and share.</p>
+        <form id="createresumeForm" method="post" enctype="multipart/form-data" action="{% url 'create-resume' %}" >
+            {% csrf_token %}
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required autocomplete="given-name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel-national">
+                    <label for="place">Place/City</label>
+                    <input type="text" id="place" name="place" required>
+                        <label for="profileImage">Upload Profile Image</label>
+                        <input type="file" id="profileImage" name="profileImage" accept="image/*" required>
+                        <small>Recommended size: 150x150 pixels. Maximum file size: 2MB.</small>
+                    
+            </fieldset>
+            <fieldset>
+                <legend>Professional Summary</legend>
+                <textarea id="summary" name="summary" rows="4" placeholder="Brief description about your skills and goals"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+                
+                <label for="company" >Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization">
+                
+                <label for="workDates">Dates of Employment</label>
+                <input type="text" id="workDates" name="workDates" placeholder="e.g., Jan 2020 - Present">
+                
+                <label for="responsibilities">Responsibilities</label>
+                <textarea id="responsibilities" name="responsibilities" rows="3"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Education</legend>
+                <label for="degree">Degree</label>
+                <input type="text" id="degree" name="degree">
+                
+                <label for="institution">Institution</label>
+                <input type="text" id="institution" name="institution">
+                
+                <label for="graduationDate">Graduation Date</label>
+                <input type="text" id="graduationDate" name="graduationDate" placeholder="e.g., May 2023">
+            </fieldset>
+            <fieldset>
+                <legend>Skills</legend>
+                <div class="skills-container">
+                    <!-- Soft Skills Dropdown -->
+                    <div class="skill-dropdown">
+                        <div class="selected-skills" id="selectedSoftSkillsContainer"></div>
+                        <div class="dropdown-button" onclick="toggleDropdown('softSkillsDropdown')">Select Soft Skills</div>
+                        <div class="dropdown-content" id="softSkillsDropdown">
+                            <label><input type="checkbox" class="skill-checkbox" value="Communication" data-category="soft"> Communication</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Teamwork" data-category="soft"> Teamwork</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Adaptability" data-category="soft"> Adaptability</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Problem-Solving" data-category="soft"> Problem-Solving</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Time Management" data-category="soft"> Time Management</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Creativity" data-category="soft"> Creativity</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Project Management" data-category="soft"> Project Management</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Leadership" data-category="soft"> Leadership</label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="soft_skills" id="softSkillsInput">
+
+                
+                    <!-- Hard Skills Dropdown -->
+                    <div class="skill-dropdown">
+                        <div class="selected-skills" id="selectedHardSkillsContainer"></div>
+                        <div class="dropdown-button" onclick="toggleDropdown('hardSkillsDropdown')">Select Hard Skills</div>
+                        <div class="dropdown-content" id="hardSkillsDropdown">
+                            <label><input type="checkbox" class="skill-checkbox" value="Programming" data-category="hard"> Programming</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Data Analysis" data-category="hard"> Data Analysis</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Database Management" data-category="hard"> Database Management</label>                            
+                            <label><input type="checkbox" class="skill-checkbox" value="Version Control" data-category="hard"> Version Control</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Technical Writing" data-category="hard"> Technical Writing</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="SEO" data-category="hard"> SEO</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Graphic Design" data-category="hard"> Graphic Design</label>
+                            <label><input type="checkbox" class="skill-checkbox" value="Networking" data-category="hard"> Networking</label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="hard_skills" id="hardSkillsInput">
+                </div>
+                
+            </fieldset>
+             <!-- Projects Section -->
+             <fieldset>
+                <legend>Projects</legend>
+                <label for="projects">Project(s):</label>
+                <textarea id="projects" name="projects" rows="3" placeholder="Describe your projects here"></textarea>
+            </fieldset>
+            <!-- Certifications Section -->
+            <fieldset>
+                <legend>Certifications</legend>
+                <label for="certifications">Certification(s):</label>
+                <textarea id="certifications" name="certifications" rows="3" placeholder="List your certifications here"></textarea>
+            </fieldset>
+
+            <!-- Awards Section -->
+            <fieldset>
+                <legend>Awards</legend>
+                <label for="awards">Award(s):</label>
+                <textarea id="awards" name="awards" rows="3" placeholder="List any awards here"></textarea>
+            </fieldset>
+
+
+            <!-- Hobbies Section -->
+            <fieldset>
+                <legend>Hobbies</legend>
+                <div class="hobbies-dropdown">
+                    <div class="selected-hobbies" id="selectedHobbiesContainer"></div>
+                    <div class="dropdown-button" onclick="toggleDropdown('hobbiesDropdown')">Select Your Hobbies</div>
+                    <div class="dropdown-content" id="hobbiesDropdown">
+                        <label><input type="checkbox" class="hobby-checkbox" value="Reading"> Reading</label>
+                        <label><input type="checkbox" class="hobby-checkbox" value="Sports"> Sports</label>
+                        <label><input type="checkbox" class="hobby-checkbox" value="Traveling"> Traveling</label>
+                        <label><input type="checkbox" class="hobby-checkbox" value="Music"> Music</label>
+                        <label><input type="checkbox" class="hobby-checkbox" value="Cooking"> Cooking</label>
+                        <label><input type="checkbox" class="hobby-checkbox" value="Photography"> Photography</label>
+                        <label><input type="checkbox" class="hobby-checkbox" value="Painting"> Painting</label>
+                    </div>
+                </div>
+               
+            </fieldset>
+        
+            <!-- Languages Section -->
+            <fieldset>
+                <legend>Languages</legend>
+                
+                <div id="languagesContainer">
+                    <!-- Dynamically added language entries will appear here -->
+                </div>
+        
+                <button type="button" onclick="addLanguage()">Add Language</button>
+            </fieldset>
+        
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit</button>
+           
+        </form>
+    </div>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>

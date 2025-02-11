@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="{% url 'index' %}">
+                <img src="{% static 'images/ResumeBoostlogo.png' %}" alt="Resume Boost logo" width="140px"></a></div>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="about-container">
+        <h2>About Us</h2>
+        <section class="introduction">
+            <p>At ResumeBoost, we make it easy to create professional, standout resumes in minutes. Our platform is designed to help you showcase your skills, achievements, and personality in a way that catches the eye of recruiters and hiring managers. </p>
+        </section>
+
+        <section class="our-vision">
+            <h3>Our Vision</h3>
+            <p>To empower every job seeker, regardless of experience or background, with the tools they need to create a resume that opens doors and drives career success. </p>
+        </section>
+
+        <section class="our-mission">
+            <h3>Our Mission</h3>
+            <p> To simplify the resume-building process and equip job seekers with effective, personalized templates and too </p>
+        </section>
+
+       
+
+        <section class="our-team">
+            <h3>Our Team</h3>
+            <div class="team-member">
+                <h4>Vivek Vallabhan</h4>
+                <p>Developed this website to simplify resume creation and support users in presenting their skills effectively</p>
+            </div>
+        </section>
+
+    </div>
+    <script  src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

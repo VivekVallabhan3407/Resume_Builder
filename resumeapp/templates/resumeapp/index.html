@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Boost</title>
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="{% url 'index' %}">
+                <img src="{% static 'images/ResumeBoostlogo.png' %}" alt="Resume Boost logo" width="140px"></a></div>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'create-resume' %}">Create Resume</a></li>
+                <li><a href="{% url 'templates' %}">Templates</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'about-us' %}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+           
+            <div class="tagline-container">
+                
+                <div class="tagline">
+                    <p><b>Create your resume to propel
+                        <br>
+                        your career forward.</b></p>
+                    <button class="start-btn"  onclick="redirectToSignup()">Start Building <i class="fas fa-arrow-right"></i></button>
+                    <div class="stats-container">
+                        <div class="stats-inner">
+                            <div class="stat" id="stat1">
+                                <div class="number">
+                                    <span>5,000+</span>
+                                </div>
+                                <p>resumes created</p>
+                            </div>
+                            <div class="stat" id="stat2">
+                                <div class="number">
+                                    <span>35%</span>
+                                </div>
+                                <p>more likely to get secured jobs</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+                <img src="{% static 'images/demo-resume.png' %}" alt="modern-resume" class="modern-resume">
+                
+                </div>
+            </div>
+            
+            <section class="features-section">
+                <h2>Our Key Features</h2>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Easy Customization</h3>
+                    <p>Personalize your resume with ease using a variety of options.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📑</div>
+                    <h3>Professional Templates</h3>
+                    <p>Choose from a variety of professionally designed templates.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Instant Preview</h3>
+                    <p>See your changes in real-time with our instant preview feature.</p>
+                </div>
+            </section>
+  
+            <div class="faq-section">
+                <div class="faq-header">
+                    <h2>Frequently Asked Questions</h2>
+
+                </div>
+                <div class="faqs-inner">
+                    <div class="accordion-block">
+                        <div class="accordian-title">
+                            <div class="accordion-head">
+                                What is a resume builder?
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </div>
+                        <div class="accordian-detail">
+                                <p>A resume builder is an online tool that helps you create a professional resume by providing templates, guidance, and tips. It simplifies the process, making it easier to showcase your skills and experience.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-block">
+                        <div class="accordian-title">
+                            <div class="accordion-head">
+                                How do I get started?
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </div>
+                        <div class="accordian-detail">
+                            <p>Sign up for an account, choose a template that fits your style, and follow the prompts to enter your information. The builder will then guide you through each section of your resume.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-block">
+                        <div class="accordian-title">
+                            <div class="accordion-head">
+                                Can I customize my resume?
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </div>
+                        <div class="accordian-detail">
+                            <p>Yes! Our resume builder allows you to customize your resume's layout, colors, and content.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-block">
+                        <div class="accordian-title">
+                            <div class="accordian-head">
+                                Can I download my resume?
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </div>
+                        <div class="accordian-detail">
+                            <p>
+                                Yes, you can easily download your resume in multiple formats, including PDF and Word.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <p>Email: <a href="mailto:support@resumeboost.com">support@resumeboost.com</a> |
+                     Phone: +1 (234) 567-8901</p>
+                </div>
+                <p>&copy; 2024 ResumeBoost. All rights reserved.</p>
+            </footer>
+            <script type="text/javascript">
+                var signupUrl = "{% url 'signup' %}";
+            </script>
+</body>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</html>
