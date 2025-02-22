@@ -75,14 +75,16 @@ WSGI_APPLICATION = 'my_resumeproject.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 import pymysql
 pymysql.install_as_MySQLdb()
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':  'resumes',
-         'USER': 'root',
-         'PASSWORD': 'v7i*k4e#g&',
-         'HOST': 'localhost',
-         'PORT': '3306'
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 

@@ -1,0 +1,21 @@
+# Environment Variables
+.env
+
+# Python Bytecode
+*.pyc
+__pycache__/
+
+# Local Development Database
+db.sqlite3
+
+# Other Common Files and Directories to Ignore
+*.log
+*.pot
+*.py[cod]
+*.so
+*.swp
+*.venv
+.cache
+coverage_html_report/
+dist/
+node_modules/
