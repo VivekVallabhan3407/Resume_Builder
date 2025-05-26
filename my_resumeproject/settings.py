@@ -76,7 +76,8 @@ WSGI_APPLICATION = 'my_resumeproject.wsgi.application'
 import pymysql
 pymysql.install_as_MySQLdb()
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
