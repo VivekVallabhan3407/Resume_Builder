@@ -24,3 +24,6 @@ A  Resume Builder that helps users create professional resumes effortlessly. The
 3. Browse available resume templates and select one.
 4. Preview your resume before finalizing.
 5. Download the resume as a PDF.
+
+### License
+This is All Rights Reserved.
